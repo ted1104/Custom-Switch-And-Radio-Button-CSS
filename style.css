@@ -9,6 +9,7 @@
 h1 {
   font-family: sans-serif;
 }
+/* STYLE FOR SWITCH BUTTON */
 .switch {
   position: relative;
   display: inline-block;
@@ -46,4 +47,32 @@ h1 {
 }
 .switch input:checked + .slider::before {
   transform: translate(50px);
+}
+
+/* STYLE FOR RADIO BUTTON */
+.radio {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid red;
+  border-radius: 100px;
+  /* padding: 2px; */
+}
+.radio input {
+  display: none;
+}
+
+.radio-custom {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  right: 4px;
+  border-radius: 100px;
+  background-color: transparent;
+}
+
+.radio input:checked + .radio-custom {
+  background-color: brown;
 }
