@@ -4,11 +4,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  border: 1px solid red;
 }
 
 h1 {
   font-family: sans-serif;
 }
+
 /* STYLE FOR SWITCH BUTTON */
 .switch {
   position: relative;
@@ -21,7 +24,7 @@ h1 {
 .switch input {
   display: none;
 }
-.slider {
+.switch .slider {
   background-color: #ccc;
   position: absolute;
   cursor: pointer;
@@ -31,7 +34,7 @@ h1 {
   bottom: 0;
   border-radius: 34px;
 }
-.slider::before {
+.switch .slider::before {
   position: absolute;
   content: "";
   height: 50px;
@@ -42,10 +45,10 @@ h1 {
   transition: 0.4s;
   border-radius: 50px;
 }
-.switch input:checked + .slider {
+.switch .switch input:checked + .slider {
   background-color: #27ff44;
 }
-.switch input:checked + .slider::before {
+.switch .switch input:checked + .slider::before {
   transform: translate(50px);
 }
 
@@ -75,4 +78,52 @@ h1 {
 
 .radio input:checked + .radio-custom {
   background-color: brown;
+}
+
+/* STYLE FOR CUSTOM BUTTON */
+.checkbtn {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.checkbtn input {
+  display: none;
+}
+.checkbtn .slider {
+  /* background-color: #ccc; */
+  /* border: 1px solid green; */
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* border-radius: 34px; */
+}
+/* .checkbtn .slider::before {
+  position: absolute;
+  content: "";
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  left: 5px;
+  bottom: 5px;
+  transition: 0.4s;
+  border-radius: 50px;
+} */
+.checkbtn input:checked + .slider {
+  background-image: url("img/check.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: local;
+
+  z-index: 10;
+}
+.checkbtn input:checked + .slider::before {
+  transform: translate(50px);
 }
